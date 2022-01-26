@@ -37,5 +37,6 @@ def test6():
     """A dummy docstring."""
     response = app.test_client().get("/login")
     assert b"Email" in response.data
-    assert b"Username" in response.data
+    assert b"Password" in response.data
+
 
