@@ -24,3 +24,18 @@ def test4():
     """A dummy docstring."""
     response = app.test_client().get("/register")
     assert response.status_code == 200
+    
+def test5():
+    """A dummy docstring."""
+    response = app.test_client().get("/register")
+    assert b"Email" in response.data
+    assert b"Username" in response.data
+    assert b"Password" in response.data
+    assert b"Confirm password" in response.data
+
+def test6():
+    """A dummy docstring."""
+    response = app.test_client().get("/login")
+    assert b"Email" in response.data
+    assert b"Username" in response.data
+
