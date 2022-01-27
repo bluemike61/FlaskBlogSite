@@ -10,7 +10,7 @@ jobs:
           
       strategy:      
         matrix:
-          platform: [ubuntu-latest, windows-latest]
+          platform: [ubuntu-latest]
           python-version: [3.7]            
           
       runs-on: ${{ matrix.platform }}
@@ -30,8 +30,8 @@ jobs:
       - name: Checking docker installation      
         run: docker run hello-world    
       - name: Push to docker Hub      
-        uses: docker/build-push-action@v1      
+        uses: docker/build-push-action@v2      
         with:        
-          username: ${{ secrets.DOCKER_USERNAME }}        
+          login: ${{ secrets.DOCKER_USERNAME }}        
           password: ${{ secrets.DOCKER_PASSWORD }}        
           repository: bluemike61/flaskblogsite
