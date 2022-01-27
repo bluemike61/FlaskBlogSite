@@ -3,10 +3,10 @@
 <form method="POST">
     {# This hidden_tag is a CSRF security feature. #}
     {{ form.hidden_tag() }}
-    {{ form.email.label }} {{ form.email() }}<br>
-    {{ form.username.label }} {{ form.username() }}<br>
-    {{ form.password.label }} {{ form.password() }}<br>
-    {{ form.pass_confirm.label }} {{ form.pass_confirm() }}<br>
+    {{ form.email.label(class = "text-white") }} {{ form.email() }}<br>
+    {{ form.username.label(class = "text-white") }} {{ form.username() }}<br>
+    {{ form.password.label(class = "text-white") }} {{ form.password() }}<br>
+    {{ form.pass_confirm.label(class = "text-white") }} {{ form.pass_confirm() }}<br>
     {{ form.submit() }}
 </form>
 {% endblock %}

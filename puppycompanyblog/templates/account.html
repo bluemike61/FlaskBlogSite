@@ -12,16 +12,16 @@
   <form  method="POST" action = "" enctype="multipart/form-data">
     {{ form.hidden_tag() }}
     <div class="form-group">
-      {{ form.username.label(class="form-group") }}
+      {{ form.username.label(class="form-group text-white") }}
       {{form.username(class='form-control')  }}
     </div
     <div class="form-group">
-      {{ form.email.label(class="form-group") }}
+      {{ form.email.label(class="form-group text-white") }}
       {{form.email(class='form-control')  }}
     </div>
     <div class="form-group">
-      {{ form.picture.label(class="form-group") }}
-      {{ form.picture(class="form-control-file") }}
+      {{ form.picture.label(class="form-group text-white") }}
+      {{ form.picture(class="form-control-file text-white") }}
     </div>
     <div class="form-group">
         {{ form.submit(class="btn btn-primary") }}
